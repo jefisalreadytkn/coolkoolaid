@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cozy Anime Scratch Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="editor">
+    <aside id="sidebar">
+      <h2>Blocks</h2>
+
+      <div class="category" id="motion">
+        <h3>▶️ Motion</h3>
+        <div class="block" draggable="true" data-type="move" data-value="10">Move 10 steps</div>
+        <div class="block" draggable="true" data-type="turn" data-value="15">Turn 15°</div>
+      </div>
+
+      <div class="category" id="looks">
+        <h3>🎨 Looks</h3>
+        <div class="block" draggable="true" data-type="say" data-value="Hello!">Say "Hello!"</div>
+        <div class="block" draggable="true" data-type="color" data-value="">Change Color</div>
+      </div>
+
+      <div class="category" id="sound">
+        <h3>🔊 Sound</h3>
+        <div class="block" draggable="true" data-type="beep" data-value="440">Beep</div>
+      </div>
+
+      <div class="category" id="control">
+        <h3>🧩 Control</h3>
+        <div class="block" draggable="true" data-type="loop" data-value="3">Repeat 3 times { } </div>
+      </div>
+
+      <div class="category" id="events">
+        <h3>⚡ Events</h3>
+        <div class="block" draggable="true" data-type="whenclicked" data-value="">When clicked { }</div>
+      </div>
+    </aside>
+
+    <section id="workspace">
+      <div id="program-area"><h2>Your Program</h2></div>
+      <button id="run-button">▶️ Run</button>
+    </section>
+
+    <section id="stage">
+      <div id="sprite"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

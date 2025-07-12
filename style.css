@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: 'Comic Neue', cursive;
+  background: #fffaf8;
+  color: #333;
+}
+#editor { display: flex; height: 100vh; }
+
+/* Sidebar styling */
+#sidebar {
+  width: 280px;
+  background: #fbe8ee;
+  padding: 20px;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.05);
+  overflow-y: auto;
+}
+#sidebar h2, .category h3 {
+  margin-top: 0;
+  color: #c63f77;
+}
+.block {
+  background: #ffeff4;
+  border: 2px solid #ffbed8;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 6px 0;
+  cursor: grab;
+  transition: transform 0.1s;
+}
+.block:active { transform: scale(0.98); }
+
+/* Workspace styling */
+#workspace {
+  width: 320px;
+  background: #fef2f4;
+  padding: 20px;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#program-area {
+  flex-grow: 1;
+  width: 100%;
+  background: #fff;
+  border: 2px dashed #ffbed8;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: auto;
+}
+.program-block {
+  background: #ffe7f0;
+  border: 2px solid #ffbed8;
+  border-radius: 10px;
+  padding: 8px;
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.remove-btn { cursor: pointer; color: #c63f77; font-weight: bold; margin-left: 8px; }
+
+/* Nested container styling */
+.container { margin-left: 12px; border-left: 2px dashed #ffbed8; padding-left: 8px; }
+
+/* Run button */
+#run-button {
+  margin: 12px 0;
+  padding: 10px 20px;
+  background: #ff8fb3;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Stage styling */
+#stage {
+  flex-grow: 1;
+  position: relative;
+  background: #fff3f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sprite {
+  width: 80px; height: 80px;
+  background-image: url('https://i.imgur.com/OYVpe2W.png');
+  background-size: contain;
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  transition: filter 0.3s;
+}

@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Cozy Scratch Editor – Full Featured</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Cozy Anime Scratch Editor — Full Version</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="editor">
     <aside id="sidebar">
-      <!-- block categories (same as before) -->
+      <h2>Blocks</h2>
+      <div class="category" id="motion">
+        <h3>▶️ Motion</h3>
+        <div class="block" draggable="true" data-type="moveX"><label>Move X:<input type="number" class="param" value="10" /></label></div>
+        <div class="block" draggable="true" data-type="moveY"><label>Move Y:<input type="number" class="param" value="10" /></label></div>
+        <div class="block" draggable="true" data-type="turn"><label>Turn:<input type="number" class="param" value="15" />°</label></div>
+      </div>
+      <div class="category" id="looks">
+        <h3>🎨 Looks</h3>
+        <div class="block" draggable="true" data-type="say"><label>Say:<input type="text" class="param" value="Hello!" /></label></div>
+        <div class="block" draggable="true" data-type="color">Change Color</div>
+      </div>
+      <div class="category" id="sound">
+        <h3>🔊 Sound</h3>
+        <div class="block" draggable="true" data-type="beep"><label>Beep:<input type="number" class="param" value="440" />Hz</label></div>
+      </div>
+      <div class="category" id="control">
+        <h3>🧩 Control</h3>
+        <div class="block" draggable="true" data-type="loop"><label>Repeat:<input type="number" class="param" value="3" /> times { }</label></div>
+      </div>
+      <div class="category" id="events">
+        <h3>⚡ Events</h3>
+        <div class="block" draggable="true" data-type="whenclicked">When sprite clicked { }</div>
+      </div>
+      <div class="category" id="js">
+        <h3>🧠 JS</h3>
+        <div class="block" draggable="true" data-type="js">JavaScript { }</div>
+      </div>
     </aside>
-
     <section id="workspace">
-      <div>
+      <div class="file-buttons">
         <button id="save-btn">💾 Save</button>
         <button id="load-btn">📂 Load</button>
-        <input type="file" id="file-input" style="display:none" accept=".json" />
+        <input type="file" id="file-input" accept=".json" style="display:none" />
       </div>
       <div id="program-area"><h2>Your Program</h2></div>
       <button id="run-button">▶️ Run</button>
     </section>
-
     <section id="stage-container">
       <div id="controls">
         <button id="start-flag">🏁</button>
